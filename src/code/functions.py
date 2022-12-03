@@ -1,3 +1,5 @@
+from os import system
+
 def main_menu_options():
     print("To quit at any time, please type: quit")
     print("1: Input class selection, and class level.")
@@ -11,12 +13,14 @@ def main_menu_options():
     return main_menu_option
 
 def main_menu():
-    main_menu_selection = "abc"
+    main_menu_selection = ""
     while main_menu_selection != "quit":
+        system('clear')
         main_menu_selection = main_menu_options()
+        system('clear')
         if main_menu_selection == "1":
             print("This is option 1.")
-
+            break
         if main_menu_selection == "2":
             print("This is option 2.")       
             break 
@@ -35,8 +39,10 @@ def main_menu():
         if main_menu_selection == "9":
             print("This is option 9.")
             break
+        if main_menu_selection == "quit":
+            quit()
         else:
             print("Please only input the number you would like to select.")
-            break
+            input("Press Enter to return to the Main Menu.")
 
 main_menu()
