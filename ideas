@@ -1,0 +1,31 @@
+use 
+try for CANTRIPS because they are level 0 spells
+
+
+This is just a rough idea at the moment I kind of want thoughts...
+The idea is it just keeps track of info (Maybe spells), spellslots for you. It'd probably work quite similarly to the Cafe Menu though honestly.
+
+You can input your class & level [Basically the right side of this table https://mykindofmeeple.com/wp-content/uploads/2022/01/Wizard-spell-slots-table-5e-dnd-735x473.jpg.webp] 
+it'll tell you the spell slots you have per level back.
+[Feature 1]
+
+Then you input spells known [this would be quite the database though so it'll likely be limited] so it can keep track of which spells you have prepared. 
+You can add / remove the spells known as a second option. 
+This would likely write into a new document for you. 
+[Feature 2]
+
+Have an external file for a database of (some) spells as a class being:
+Spell name = [cost, spell-slot, description]. User can add to this database as well.
+[Feature 3]
+
+
+
+nice to have
+
+Then choose to use a spell, it'll provide the cost, ask what level you want to use it at and then provide the description of the spell. 
+Automatically use the associated spell slot off your characters sheet for you. 
+If you're unable to use it, the app should then be able to tell you that you've used up all your resources and maybe suggest the next highest available spellslot.
+
+Potential option for feature ?4? could be to recommend a spell to learn and reason why. 
+Only reason I have this here is I can't think of an example of using a for loop for the rest but I haven't exactly thought through how I'm doing the others yet. 
+If those don't use for loops, this would (to check against the spells known). 
