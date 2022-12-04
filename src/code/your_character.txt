@@ -1,0 +1,52 @@
+Your character is a Wizard
+
+Character level:
+0
+
+Cantrips known:
+0
+
+level 1 spellslots:
+0
+Remaining:
+0
+
+level 2 spellslots:
+0
+Remaining:
+0
+
+level 3 spellslots:
+0
+Remaining:
+0
+
+level 4 spellslots:
+0
+Remaining:
+0
+
+level 5 spellslots:
+0
+Remaining:
+0
+
+level 6 spellslots:
+0
+Remaining:
+0
+
+level 7 spellslots:
+0
+Remaining:
+0
+
+level 8 spellslots:
+0
+Remaining:
+0
+
+level 9 spellslots:
+0
+Remaining:
+0
