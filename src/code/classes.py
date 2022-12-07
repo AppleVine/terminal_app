@@ -108,6 +108,8 @@ def get_wizard_level():
         else:
             print("That's not a valid option, please try again.")
             input("Enter to continue.")
+    
+
 
 class Paladin: 
     def __init__(self, level = 0, cantrips_known = 0, level_1_spellslots = 0, level_2_spellslots = 0, level_3_spellslots = 0, level_4_spellslots = 0, level_5_spellslots = 0, level_6_spellslots = 0, level_7_spellslots = 0, level_8_spellslots = 0, level_9_spellslots = 0,):
