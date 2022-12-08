@@ -1,4 +1,5 @@
 from os import system
+from functions import *
 
 class Wizard: 
     def __init__(self, level = 0, cantrips_known = 0, level_1_spellslots = 0, level_2_spellslots = 0, level_3_spellslots = 0, level_4_spellslots = 0, level_5_spellslots = 0, level_6_spellslots = 0, level_7_spellslots = 0, level_8_spellslots = 0, level_9_spellslots = 0,):
@@ -34,6 +35,8 @@ level_17_wizard = Wizard(17, 5, 4, 3, 3, 3, 2, 1, 1, 1, 1)
 level_18_wizard = Wizard(18, 5, 4, 3, 3, 3, 3, 1, 1, 1, 1)
 level_19_wizard = Wizard(19, 5, 4, 3, 3, 3, 3, 2, 1, 1, 1)
 level_20_wizard = Wizard(20, 5, 4, 3, 3, 3, 3, 2, 2, 1, 1)
+
+character = Wizard(0)
 
 def get_wizard_level():
     input_level = 0
@@ -108,7 +111,6 @@ def get_wizard_level():
         else:
             print("That's not a valid option, please try again.")
             input("Enter to continue.")
-    
 
 
 class Paladin: 
@@ -220,3 +222,17 @@ def get_paladin_level():
             print("That's not a valid option, please try again.")
             input("Enter to continue.")
 
+def get_character():
+    print("Please enter in your class from the following choices: ")
+    selection = input("Paladin \nWizard\n")
+    system('clear')
+    if selection == "quit":
+        quit()
+    elif selection == "Paladin":
+        get_paladin_level()
+        print(your_character.level_1_spellslots)
+        return your_character
+    elif selection == "Wizard":
+        get_wizard_level()
+        print(your_character.level_1_spellslots)
+        return your_character

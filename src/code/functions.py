@@ -1,7 +1,6 @@
 from os import system
 from classes import * 
 
-
 def main_menu_options():
     print("To quit at any time, please type: quit")
     print("1: Input class selection, and class level.")
@@ -21,23 +20,13 @@ def main_menu():
         main_menu_selection = main_menu_options()
         system('clear')
         if main_menu_selection == "1":
-            print("Please enter in your class from the following choices: ")
-            selection = input("Paladin \nWizard\n")
-            system('clear')
-            if selection == "quit":
-                quit()
-            elif selection == "Paladin":
-                get_paladin_level()
-                break
-            elif selection == "Wizard":
-                get_wizard_level()
-                break
-            else:
-                print("Please only input the number you would like to select.")
-                input("Press Enter to return to the Main Menu.")
+            global character
+            character = get_character()
+            input("Character successfully created. Please press enter to return to main menu.")
+            main_menu()
         if main_menu_selection == "2":
-            print("This is option 2.")       
-            break 
+            get_spells()
+            main_menu()
         if main_menu_selection == "3":
             print("This is option 3.")
             break
@@ -58,3 +47,16 @@ def main_menu():
         else:
             print("Please only input the number you would like to select.")
             input("Press Enter to return to the Main Menu.")
+
+def get_spells():
+    print("You have " + str(character.level_1_spellslots) + " level 1 spellslots available.")
+    print("You have " + str(character.level_2_spellslots) + " level 2 spellslots available.")
+    print("You have " + str(character.level_3_spellslots) + " level 3 spellslots available.")
+    print("You have " + str(character.level_4_spellslots) + " level 4 spellslots available.")
+    print("You have " + str(character.level_5_spellslots) + " level 5 spellslots available.")
+    print("You have " + str(character.level_6_spellslots) + " level 6 spellslots available.")
+    print("You have " + str(character.level_7_spellslots) + " level 7 spellslots available.")
+    print("You have " + str(character.level_8_spellslots) + " level 8 spellslots available.")
+    print("You have " + str(character.level_9_spellslots) + " level 9 spellslots available.")
+    input("Press enter to continue.")
+
