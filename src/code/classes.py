@@ -23,28 +23,28 @@ class Wizard:
         self.level_8_spellslots = level_8_spellslots
         self.level_9_spellslots = level_9_spellslots
         
-# level_1_wizard = 
-# level_2_wizard = 
-# level_3_wizard = 
-# level_4_wizard = Wizard(4, 4, 4, 3)
-# level_5_wizard = Wizard(5, 4, 4, 3, 2)
-# level_6_wizard = Wizard(6, 4, 4, 3, 3)
-# level_7_wizard = Wizard(7, 4, 4, 3, 3, 1)
-# level_8_wizard = Wizard(8, 4, 4, 3, 3, 2)
-# level_9_wizard = Wizard(9, 4, 4, 3, 3, 3, 1)
-# level_10_wizard = Wizard(10, 5, 4, 3, 3, 3, 2)
-# level_11_wizard = Wizard(11, 5, 4, 3, 3, 3, 2, 1)
-# level_12_wizard = Wizard(12, 5, 4, 3, 3, 3, 2, 1)
-# level_13_wizard = Wizard(13, 5, 4, 3, 3, 3, 2, 1, 1)
-# level_14_wizard = Wizard(14, 5, 4, 3, 3, 3, 2, 1, 1)
-# level_15_wizard = Wizard(15, 5, 4, 3, 3, 3, 2, 1, 1, 1)
-# level_16_wizard = Wizard(16, 5, 4, 3, 3, 3, 2, 1, 1, 1)
-# level_17_wizard = Wizard(17, 5, 4, 3, 3, 3, 2, 1, 1, 1, 1)
-# level_18_wizard = Wizard(18, 5, 4, 3, 3, 3, 3, 1, 1, 1, 1)
-# level_19_wizard = Wizard(19, 5, 4, 3, 3, 3, 3, 2, 1, 1, 1)
-# level_20_wizard = Wizard(20, 5, 4, 3, 3, 3, 3, 2, 2, 1, 1)
+level_1_wizard = 
+level_2_wizard = 
+level_3_wizard = 
+level_4_wizard = Wizard(4, 4, 4, 3)
+level_5_wizard = Wizard(5, 4, 4, 3, 2)
+level_6_wizard = Wizard(6, 4, 4, 3, 3)
+level_7_wizard = Wizard(7, 4, 4, 3, 3, 1)
+level_8_wizard = Wizard(8, 4, 4, 3, 3, 2)
+level_9_wizard = Wizard(9, 4, 4, 3, 3, 3, 1)
+level_10_wizard = Wizard(10, 5, 4, 3, 3, 3, 2)
+level_11_wizard = Wizard(11, 5, 4, 3, 3, 3, 2, 1)
+level_12_wizard = Wizard(12, 5, 4, 3, 3, 3, 2, 1)
+level_13_wizard = Wizard(13, 5, 4, 3, 3, 3, 2, 1, 1)
+level_14_wizard = Wizard(14, 5, 4, 3, 3, 3, 2, 1, 1)
+level_15_wizard = Wizard(15, 5, 4, 3, 3, 3, 2, 1, 1, 1)
+level_16_wizard = Wizard(16, 5, 4, 3, 3, 3, 2, 1, 1, 1)
+level_17_wizard = Wizard(17, 5, 4, 3, 3, 3, 2, 1, 1, 1, 1)
+level_18_wizard = Wizard(18, 5, 4, 3, 3, 3, 3, 1, 1, 1, 1)
+level_19_wizard = Wizard(19, 5, 4, 3, 3, 3, 3, 2, 1, 1, 1)
+level_20_wizard = Wizard(20, 5, 4, 3, 3, 3, 3, 2, 2, 1, 1)
 
-# character = Wizard(0)
+character = Wizard(0)
 
 def get_wizard_level():
     input_level = 0
