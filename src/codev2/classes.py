@@ -31,11 +31,6 @@ class Paladin:
         self.level_9_spellslots = level_9_spellslots
     
 
-class SpellSlot():
-    def __init__(self,maximum, remaining):
-        self.maximum = maximum
-        self.remaining = remaining
-
 def get_wizard_level():
     input_level = 0
     your_character = None
@@ -182,19 +177,17 @@ def get_paladin_level():
 
 def get_character():
     print("Please enter in your class from the following choices: ")
-    selection = input("Paladin \nWizard\n")
+    class_selection = input("Paladin \nWizard\n")
     system('clear')
-    if selection == "quit":
+    if class_selection == "quit":
         quit()
-    elif selection == "Paladin":
+    elif class_selection == "Paladin":
         your_character = get_paladin_level()
         print(your_character.level_1_spellslots)
+        input("Character successfully created. Please press enter to return to main menu.")
         return your_character
-    elif selection == "Wizard":
+    elif class_selection == "Wizard":
         your_character = get_wizard_level()
         print(your_character.level_1_spellslots)
+        input("Character successfully created. Please press enter to return to main menu.")
         return your_character
-
-get_character()
-
-

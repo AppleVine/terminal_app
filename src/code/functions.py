@@ -19,40 +19,39 @@ def do_something(character):
     return 42
 
 def main_menu():
-    pass
-    # main_menu_selection = ""
-    # while main_menu_selection != "quit":
-    #     system('clear')
-    #     main_menu_selection = main_menu_options()
-    #     system('clear')
-    #     if main_menu_selection == "1":
-    #         # global character
-    #         # character = get_character()
-    #         input("Character successfully created. Please press enter to return to main menu.")
-    #         main_menu()
-    #     if main_menu_selection == "2":
-    #         get_spells()
-    #         main_menu()
-    #     if main_menu_selection == "3":
-    #         print("This is option 3.")
-    #         break
-    #     if main_menu_selection == "4":
-    #         print("This is option 4.")
-    #         break
-    #     if main_menu_selection == "5":
-    #         print("This is option 5.")
-    #         break
-    #     if main_menu_selection == "6":
-    #         print("This is option 6.")
-    #         break
-    #     if main_menu_selection == "9":
-    #         print("This is option 9.")
-    #         break
-    #     if main_menu_selection == "quit":
-    #         quit()
-    #     else:
-    #         print("Please only input the number you would like to select.")
-    #         input("Press Enter to return to the Main Menu.")
+    main_menu_selection = ""
+    while main_menu_selection != "quit":
+        system('clear')
+        main_menu_selection = main_menu_options()
+        system('clear')
+        if main_menu_selection == "1":
+            # global character
+            # character = get_character()
+            input("Character successfully created. Please press enter to return to main menu.")
+            main_menu()
+        if main_menu_selection == "2":
+            get_spells()
+            main_menu()
+        if main_menu_selection == "3":
+            print("This is option 3.")
+            break
+        if main_menu_selection == "4":
+            print("This is option 4.")
+            break
+        if main_menu_selection == "5":
+            print("This is option 5.")
+            break
+        if main_menu_selection == "6":
+            print("This is option 6.")
+            break
+        if main_menu_selection == "9":
+            print("This is option 9.")
+            break
+        if main_menu_selection == "quit":
+            quit()
+        else:
+            print("Please only input the number you would like to select.")
+            input("Press Enter to return to the Main Menu.")
 
 def get_spells(character):
     try:
@@ -67,6 +66,5 @@ def get_spells(character):
         print("You have " + str(character.level_9_spellslots) + " level 9 spellslots available.")
     except:
         print("you need to create a charcter first")
-    
     input("Press enter to continue.")
 
