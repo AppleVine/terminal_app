@@ -240,8 +240,3 @@ def get_character():
         get_wizard_level()
         print(your_character.level_1_spellslots)
         return your_character
-
-# def something():
-#     return "somethingElse"
-
-# value = something()

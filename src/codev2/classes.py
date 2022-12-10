@@ -1,33 +1,34 @@
 from os import system
 
+your_character = None
 
 class Wizard: 
     def __init__(self, level = 0, cantrips_known = 0, level_1_spellslots = 0, level_2_spellslots = 0, level_3_spellslots = 0, level_4_spellslots = 0, level_5_spellslots = 0, level_6_spellslots = 0, level_7_spellslots = 0, level_8_spellslots = 0, level_9_spellslots = 0,):
         self.level = level
         self.cantrips_known = cantrips_known
-        self.level_1_spellslots = SpellSlot(level_1_spellslots)
-        self.level_2_spellslots = SpellSlot(level_2_spellslots)
-        self.level_3_spellslots = SpellSlot(level_3_spellslots)
-        self.level_4_spellslots = SpellSlot(level_4_spellslots)
-        self.level_5_spellslots = SpellSlot(level_5_spellslots)
-        self.level_6_spellslots = SpellSlot(level_6_spellslots)
-        self.level_7_spellslots = SpellSlot(level_7_spellslots)
-        self.level_8_spellslots = SpellSlot(level_8_spellslots)
-        self.level_9_spellslots = SpellSlot(level_9_spellslots)
+        self.level_1_spellslots = level_1_spellslots
+        self.level_2_spellslots = level_2_spellslots
+        self.level_3_spellslots = level_3_spellslots
+        self.level_4_spellslots = level_4_spellslots
+        self.level_5_spellslots = level_5_spellslots
+        self.level_6_spellslots = level_6_spellslots
+        self.level_7_spellslots = level_7_spellslots
+        self.level_8_spellslots = level_8_spellslots
+        self.level_9_spellslots = level_9_spellslots
     
 class Paladin: 
     def __init__(self, level = 0, cantrips_known = 0, level_1_spellslots = 0, level_2_spellslots = 0, level_3_spellslots = 0, level_4_spellslots = 0, level_5_spellslots = 0, level_6_spellslots = 0, level_7_spellslots = 0, level_8_spellslots = 0, level_9_spellslots = 0,):
         self.level = level
         self.cantrips_known = cantrips_known
-        self.level_1_spellslots = SpellSlot(level_1_spellslots)
-        self.level_2_spellslots = SpellSlot(level_2_spellslots)
-        self.level_3_spellslots = SpellSlot(level_3_spellslots)
-        self.level_4_spellslots = SpellSlot(level_4_spellslots)
-        self.level_5_spellslots = SpellSlot(level_5_spellslots)
-        self.level_6_spellslots = SpellSlot(level_6_spellslots)
-        self.level_7_spellslots = SpellSlot(level_7_spellslots)
-        self.level_8_spellslots = SpellSlot(level_8_spellslots)
-        self.level_9_spellslots = SpellSlot(level_9_spellslots)
+        self.level_1_spellslots = level_1_spellslots
+        self.level_2_spellslots = level_2_spellslots
+        self.level_3_spellslots = level_3_spellslots
+        self.level_4_spellslots = level_4_spellslots
+        self.level_5_spellslots = level_5_spellslots
+        self.level_6_spellslots = level_6_spellslots
+        self.level_7_spellslots = level_7_spellslots
+        self.level_8_spellslots = level_8_spellslots
+        self.level_9_spellslots = level_9_spellslots
     
 
 class SpellSlot():
@@ -35,8 +36,9 @@ class SpellSlot():
         self.maximum = maximum
         self.remaining = remaining
 
-def get_wizard_level(your_character):
+def get_wizard_level():
     input_level = 0
+    your_character = None
     while input_level != "quit":
         system('clear')
         input_level = input("What level is your Wizard? ")
@@ -176,3 +178,23 @@ def get_paladin_level():
         else:
             print("That's not a valid option, please try again.")
             input("Enter to continue.")
+
+
+def get_character():
+    print("Please enter in your class from the following choices: ")
+    selection = input("Paladin \nWizard\n")
+    system('clear')
+    if selection == "quit":
+        quit()
+    elif selection == "Paladin":
+        your_character = get_paladin_level()
+        print(your_character.level_1_spellslots)
+        return your_character
+    elif selection == "Wizard":
+        your_character = get_wizard_level()
+        print(your_character.level_1_spellslots)
+        return your_character
+
+get_character()
+
+
