@@ -73,10 +73,6 @@ level_18_paladin = Paladin(18, 0, 4, 3, 3, 3, 1)
 level_19_paladin = Paladin(19, 0, 4, 3, 3, 3, 2)
 level_20_paladin = Paladin(20, 0, 4, 3, 3, 3, 2)
 
-###
-
-###
-
 
 
 
