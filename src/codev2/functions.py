@@ -26,8 +26,9 @@ def main_menu():
             your_character = get_character()
         elif main_menu_selection == "2":
             get_spells(your_character)
+            input("Press enter to return to the main menu.")
         elif main_menu_selection == "3":
-            print("This is option 3.")
+            use_spell(your_character)
             input("Press enter to return to the main menu.")
         elif main_menu_selection == "4":
             print("This is option 4.")
@@ -78,3 +79,61 @@ def get_spells(your_character):
     except:
         print("you need to create a charcter first")
         input("Press enter to return to main menu.")
+
+
+def use_spell(your_character):
+    spell_selection = input("What level spellslot are you using?")
+    if spell_selection == "1":
+        if your_character.level_1_remaining >= 1:
+            your_character.level_1_remaining -= 1
+            return your_character
+        else:
+            print("You do not have enough spell slots remaining. You need to rest first!")
+    elif spell_selection == "2":
+        if your_character.level_2_remaining >= 1:
+            your_character.level_2_remaining -= 1
+            return your_character
+        else:
+            print("You do not have enough spell slots remaining. You need to rest first!")
+    elif spell_selection == "3":
+        if your_character.level_3_remaining >= 1:
+            your_character.level_3_remaining -= 1
+            return your_character
+        else:
+            print("You do not have enough spell slots remaining. You need to rest first!")
+    elif spell_selection == "4":
+        if your_character.level_4_remaining >= 1:
+            your_character.level_4_remaining -= 1
+            return your_character
+        else:
+            print("You do not have enough spell slots remaining. You need to rest first!")
+    elif spell_selection == "5":
+        if your_character.level_5_remaining >= 1:
+            your_character.level_5_remaining -= 1
+            return your_character
+        else:
+            print("You do not have enough spell slots remaining. You need to rest first!")
+    elif spell_selection == "6":
+        if your_character.level_6_remaining >= 1:
+            your_character.level_6_remaining -= 1
+            return your_character
+        else:
+            print("You do not have enough spell slots remaining. You need to rest first!")
+    elif spell_selection == "7":
+        if your_character.level_7_remaining >= 1:
+            your_character.level_7_remaining -= 1
+            return your_character
+        else:
+            print("You do not have enough spell slots remaining. You need to rest first!")
+    elif spell_selection == "8":
+        if your_character.level_8_remaining >= 1:
+            your_character.level_8_remaining -= 1
+            return your_character
+        else:
+            print("You do not have enough spell slots remaining. You need to rest first!")
+    elif spell_selection == "9":
+        if your_character.level_9_remaining >= 1:
+            your_character.level_9_remaining -= 1
+            return your_character
+        else:
+            print("You do not have enough spell slots remaining. You need to rest first!")
