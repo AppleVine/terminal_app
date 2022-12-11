@@ -104,6 +104,7 @@ def get_wizard_level():
             print("That's not a valid option, please try again.")
             input("Enter to continue.")
 
+
 def get_paladin_level():
     input_level = 0
     while input_level != "quit":
@@ -173,6 +174,7 @@ def get_paladin_level():
         else:
             print("That's not a valid option, please try again.")
             input("Enter to continue.")
+
 
 
 def get_character():
