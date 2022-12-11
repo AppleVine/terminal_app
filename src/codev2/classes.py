@@ -201,17 +201,17 @@ def get_paladin_level():
 
 def get_character():
     print("Please enter in your class from the following choices: ")
-    class_selection = input("Paladin \nWizard\n")
+    class_selection = input("Paladin \nWizard\n \n-------- \n \n")
     system('clear')
     if class_selection == "quit":
         quit()
     elif class_selection == "Paladin":
         your_character = get_paladin_level()
         print(your_character.level_1_spellslots)
-        input("Character successfully created. Please press enter to return to main menu.")
+        input("Character successfully created. Please press enter to return to main menu. \n \n-------- \n \n")
         return your_character
     elif class_selection == "Wizard":
         your_character = get_wizard_level()
         print(your_character.level_1_spellslots)
-        input("Character successfully created. Please press enter to return to main menu.")
+        input("Character successfully created. Please press enter to return to main menu.\n \n-------- \n \n")
         return your_character
