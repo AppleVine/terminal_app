@@ -194,8 +194,8 @@ def get_paladin_level():
             your_character = Paladin(20, 0, 4, 3, 3, 3, 2)
             return your_character
         else:
-            print("That's not a valid option, please try again.")
-            input("Enter to continue.")
+            input("That's not a valid option, please try again. \nPress enter to continue.")
+
 
 
 
