@@ -1,15 +1,17 @@
 from os import system
 from classes import *
+import csv
 
 def main_menu_options():
     print("To quit at any time, please type: quit")
     print("1: Input class selection, and class level.")
     print("2: Check available spellslots")
     print("3: Use a spell")
-    print("4: rest")
+    print("4: Long rest")
     print("5: View spell database")
     print("6: Update character spell-list.")
     print("7: Recommend my next learned spell.")
+    print("8: Save your character.")
     print("9: Settings.")
     main_menu_option = input("Enter your option: ")
     return main_menu_option
@@ -37,8 +39,11 @@ def main_menu():
         elif main_menu_selection == "7":
             print("This is option 7.")
             input("Press enter to return to the main menu.")
-        elif main_menu_selection == "9":
-            print("This is option 9.")
+        elif main_menu_selection == "8":
+            print("This is option 8.")
+            input("Press enter to return to the main menu.")
+        elif main_menu_selection == "8":
+            print("This is option 8.")
             input("Press enter to return to the main menu.")
         elif main_menu_selection == "quit":
             quit()
@@ -157,3 +162,8 @@ def rest(your_character):
     input("You are all rested, and spellslots have been restored.\nPress enter to continue.\n\n-------- \n\n")
     return your_character
 
+def save_character():
+    with open ('your_character_file.csv', mode='w') as your_character_file:
+        csv_reader = csv.reader(your_character_file)
+
+        
