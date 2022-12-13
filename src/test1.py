@@ -45,12 +45,12 @@ def save_character():
         writer.writeheader()
         writer.writerow(data)
 
+def load_character():
+    with open ('your_character_file.csv', 'r') as your_character_file:
+        csv_reader = csv.reader(your_character_file)
+        for line in csv_reader:
+            print(line)
+            print(type(csv_reader))
 
-
-
-# with open ('your_character_file.csv', 'r') as your_character_file:
-#     csv_reader = csv.reader(your_character_file)
-
-#     for line in csv_reader:
-#         print(line)
-
+save_character()
+load_character()
