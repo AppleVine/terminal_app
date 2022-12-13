@@ -1,5 +1,6 @@
 import csv
 
+
 your_character = None
 
 class Wizard: 
@@ -7,7 +8,7 @@ class Wizard:
     level_4_spellslots = 0, level_4_remaining = 0, level_5_spellslots = 0, level_5_remaining = 0, level_6_spellslots = 0, level_6_remaining = 0, level_7_spellslots = 0, level_7_remaining = 0, 
     level_8_spellslots = 0, level_8_remaining = 0, level_9_spellslots = 0, level_9_remaining = 0):
         self.dndclass = dndclass
-        self.level = level
+        self.level = level  
         self.cantrips_known = cantrips_known
         self.level_1_spellslots = level_1_spellslots
         self.level_1_remaining = level_1_remaining
@@ -28,7 +29,9 @@ class Wizard:
         self.level_9_spellslots = level_9_spellslots
         self.level_9_remaining = level_9_remaining
 
-your_character = Wizard(15, 5, 4, 4, 3, 3, 3, 3, 3, 3, 2, 2, 1, 1, 1, 1, 1, 1)
+your_character = Wizard("Wizard", 15, 5, 4, 4, 3, 3, 3, 3, 3, 3, 2, 2, 1, 1, 1, 1, 1, 1)
+my_character = Wizard(0) 
+
 
 data = {
     "dndclass": your_character.dndclass,
@@ -38,6 +41,7 @@ data = {
     "level_1_remaining": your_character.level_1_remaining,
 }
 
+loaded_data = []
 
 def save_character():
     with open("your_character_file.csv", 'w') as your_character_file:
@@ -45,12 +49,24 @@ def save_character():
         writer.writeheader()
         writer.writerow(data)
 
+
 def load_character():
     with open ('your_character_file.csv', 'r') as your_character_file:
-        csv_reader = csv.reader(your_character_file)
-        for line in csv_reader:
-            print(line)
-            print(type(csv_reader))
+        heading = next(your_character_file)
+        reader = csv.reader(your_character_file)
+        for row in reader:
+            loaded_data = row
+        my_character.dndclass = loaded_data[0]
+        my_character.level = int(loaded_data[1])
+        my_character.cantrips_known = int(loaded_data[2])
+        my_character.level_1_spellslots = int(loaded_data[3])
+        my_character.level_1_remaining = int(loaded_data[4])
+        return my_character
+        
 
 save_character()
 load_character()
+print(my_character.level)
+
+
+
