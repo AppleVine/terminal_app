@@ -39,6 +39,22 @@ data = {
     "cantrips_known": your_character.cantrips_known,
     "level_1_spellslots": your_character.level_1_spellslots,
     "level_1_remaining": your_character.level_1_remaining,
+    "level_2_spellslots": your_character.level_2_spellslots,
+    "level_2_remaining": your_character.level_2_remaining,
+    "level_3_spellslots": your_character.level_3_spellslots,
+    "level_3_remaining": your_character.level_3_remaining,
+    "level_4_spellslots": your_character.level_4_spellslots,
+    "level_4_remaining": your_character.level_4_remaining,
+    "level_5_spellslots": your_character.level_5_spellslots,
+    "level_5_remaining": your_character.level_5_remaining,
+    "level_6_spellslots": your_character.level_6_spellslots,
+    "level_6_remaining": your_character.level_6_remaining,
+    "level_7_spellslots": your_character.level_7_spellslots,
+    "level_7_remaining": your_character.level_7_remaining,
+    "level_8_spellslots": your_character.level_8_spellslots,
+    "level_8_remaining": your_character.level_8_remaining,
+    "level_9_spellslots": your_character.level_9_spellslots,
+    "level_9_remaining": your_character.level_9_remaining,
 }
 
 loaded_data = []
