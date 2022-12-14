@@ -1,4 +1,5 @@
 from os import system
+import pytest
 
 class Full_Caster: 
     def __init__(self, dndclass = "Wizard", level = 0, cantrips_known = 0, level_1_spellslots = 0, level_1_remaining = 0, level_2_spellslots = 0, level_2_remaining = 0, level_3_spellslots = 0, level_3_remaining = 0, 
@@ -197,20 +198,49 @@ def get_paladin_level():
         else:
             input("That's not a valid option, please try again. \nPress enter to continue.")
 
+class_selection = None
 
-def get_character():
-    print("Please enter in your class from the following choices: ")
+def class_input():
+    print("Please enter in the class from the following choices: ")
     class_selection = input("Paladin \nWizard\n \n-------- \n \n")
     system('clear')
+    return class_selection
+
+
+def class_selector(class_selection):
     if class_selection == "quit":
         quit()
     elif class_selection == "Paladin":
         your_character = get_paladin_level()
-        print(your_character.level_1_spellslots)
         input("Character successfully created. Please press enter to return to main menu. \n \n-------- \n \n")
         return your_character
     elif class_selection == "Wizard":
         your_character = get_wizard_level()
-        print(your_character.level_1_spellslots)
         input("Character successfully created. Please press enter to return to main menu.\n \n-------- \n \n")
         return your_character
+
+
+def get_character():
+    # print("Please enter in your class from the following choices: ")
+    # class_selection = input("Paladin \nWizard\n \n-------- \n \n")
+    # system('clear')
+    class_selection = class_input()
+    # if class_selection == "quit":
+    #     quit()
+    your_character = class_selector(class_selection)
+    return your_character
+
+
+    # elif class_selection == "Paladin":
+    #     your_character = get_paladin_level()
+    #     input("Character successfully created. Please press enter to return to main menu. \n \n-------- \n \n")
+    #     return your_character
+    # elif class_selection == "Wizard":
+    #     your_character = get_wizard_level()
+    #     input("Character successfully created. Please press enter to return to main menu.\n \n-------- \n \n")
+    #     return your_character
+
+
+
+
+
