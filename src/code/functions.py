@@ -17,7 +17,7 @@ def main_menu_options():
     main_menu_option = input("Enter your option: ")
     return main_menu_option
 
-def main_menu():
+def main_menu(your_character):
     main_menu_selection = ""
     while main_menu_selection != "quit":
         system('clear')
@@ -201,35 +201,99 @@ def save_character(your_character):
         writer.writeheader()
         writer.writerow(data)
 
+# def load_character():
+#     your_character = Full_Caster("Blank", 0)
+#     with open ('your_character_file.csv', 'r') as your_character_file:
+#         heading = next(your_character_file)
+#         reader = csv.reader(your_character_file)
+#         for row in reader:
+#             loaded_data = row
+#     your_character.dndclass = loaded_data[0]
+#     your_character.level = int(loaded_data[1])
+#     your_character.cantrips_known = int(loaded_data[2])
+#     your_character.level_1_spellslots = int(loaded_data[3])
+#     your_character.level_1_remaining = int(loaded_data[4])
+#     your_character.level_2_spellslots = int(loaded_data[5])
+#     your_character.level_2_remaining = int(loaded_data[6])
+#     your_character.level_3_spellslots = int(loaded_data[7])
+#     your_character.level_3_remaining = int(loaded_data[8])
+#     your_character.level_4_spellslots = int(loaded_data[9])
+#     your_character.level_4_remaining = int(loaded_data[10])
+#     your_character.level_5_spellslots = int(loaded_data[11])
+#     your_character.level_5_remaining = int(loaded_data[12])
+#     your_character.level_6_spellslots = int(loaded_data[13])
+#     your_character.level_6_remaining = int(loaded_data[14])
+#     your_character.level_7_spellslots = int(loaded_data[15])
+#     your_character.level_7_remaining = int(loaded_data[16])
+#     your_character.level_8_spellslots = int(loaded_data[17])
+#     your_character.level_8_remaining = int(loaded_data[18])
+#     your_character.level_9_spellslots = int(loaded_data[19])
+#     your_character.level_9_remaining = int(loaded_data[20])
+#     print(your_character.dndclass)
+#     print(your_character.level)
+#     input("Enter to continue")
+#     return your_character
+
 def load_character():
-    your_character = Full_Caster("Blank", 0)
     with open ('your_character_file.csv', 'r') as your_character_file:
         heading = next(your_character_file)
         reader = csv.reader(your_character_file)
         for row in reader:
             loaded_data = row
-    your_character.dndclass = loaded_data[0]
-    your_character.level = int(loaded_data[1])
-    your_character.cantrips_known = int(loaded_data[2])
-    your_character.level_1_spellslots = int(loaded_data[3])
-    your_character.level_1_remaining = int(loaded_data[4])
-    your_character.level_2_spellslots = int(loaded_data[5])
-    your_character.level_2_remaining = int(loaded_data[6])
-    your_character.level_3_spellslots = int(loaded_data[7])
-    your_character.level_3_remaining = int(loaded_data[8])
-    your_character.level_4_spellslots = int(loaded_data[9])
-    your_character.level_4_remaining = int(loaded_data[10])
-    your_character.level_5_spellslots = int(loaded_data[11])
-    your_character.level_5_remaining = int(loaded_data[12])
-    your_character.level_6_spellslots = int(loaded_data[13])
-    your_character.level_6_remaining = int(loaded_data[14])
-    your_character.level_7_spellslots = int(loaded_data[15])
-    your_character.level_7_remaining = int(loaded_data[16])
-    your_character.level_8_spellslots = int(loaded_data[17])
-    your_character.level_8_remaining = int(loaded_data[18])
-    your_character.level_9_spellslots = int(loaded_data[19])
-    your_character.level_9_remaining = int(loaded_data[20])
-    print(your_character.dndclass)
-    print(your_character.level)
-    input("Enter to continue")
-    return your_character
+    if loaded_data[0] == "Wizard":
+        your_character = Full_Caster("Wizard", 0)
+        your_character.level = int(loaded_data[1])
+        your_character.cantrips_known = int(loaded_data[2])
+        your_character.level_1_spellslots = int(loaded_data[3])
+        your_character.level_1_remaining = int(loaded_data[4])
+        your_character.level_2_spellslots = int(loaded_data[5])
+        your_character.level_2_remaining = int(loaded_data[6])
+        your_character.level_3_spellslots = int(loaded_data[7])
+        your_character.level_3_remaining = int(loaded_data[8])
+        your_character.level_4_spellslots = int(loaded_data[9])
+        your_character.level_4_remaining = int(loaded_data[10])
+        your_character.level_5_spellslots = int(loaded_data[11])
+        your_character.level_5_remaining = int(loaded_data[12])
+        your_character.level_6_spellslots = int(loaded_data[13])
+        your_character.level_6_remaining = int(loaded_data[14])
+        your_character.level_7_spellslots = int(loaded_data[15])
+        your_character.level_7_remaining = int(loaded_data[16])
+        your_character.level_8_spellslots = int(loaded_data[17])
+        your_character.level_8_remaining = int(loaded_data[18])
+        your_character.level_9_spellslots = int(loaded_data[19])
+        your_character.level_9_remaining = int(loaded_data[20])
+        print(your_character.level)
+        print(your_character.dndclass)
+        print(loaded_data[0])
+        print(your_character.level_1_remaining)
+        return your_character
+    elif loaded_data[0] == "Paladin":
+        your_character = Half_Caster("Paladin", 0)
+        your_character.level = int(loaded_data[1])
+        your_character.cantrips_known = int(loaded_data[2])
+        your_character.level_1_spellslots = int(loaded_data[3])
+        your_character.level_1_remaining = int(loaded_data[4])
+        your_character.level_2_spellslots = int(loaded_data[5])
+        your_character.level_2_remaining = int(loaded_data[6])
+        your_character.level_3_spellslots = int(loaded_data[7])
+        your_character.level_3_remaining = int(loaded_data[8])
+        your_character.level_4_spellslots = int(loaded_data[9])
+        your_character.level_4_remaining = int(loaded_data[10])
+        your_character.level_5_spellslots = int(loaded_data[11])
+        your_character.level_5_remaining = int(loaded_data[12])
+        your_character.level_6_spellslots = int(loaded_data[13])
+        your_character.level_6_remaining = int(loaded_data[14])
+        your_character.level_7_spellslots = int(loaded_data[15])
+        your_character.level_7_remaining = int(loaded_data[16])
+        your_character.level_8_spellslots = int(loaded_data[17])
+        your_character.level_8_remaining = int(loaded_data[18])
+        your_character.level_9_spellslots = int(loaded_data[19])
+        your_character.level_9_remaining = int(loaded_data[20])
+        print(your_character.level)
+        print(your_character.dndclass)
+        print(your_character.level_1_remaining)
+        input("Enter to continue")
+        return your_character
+    else:
+        "You have an error."
+

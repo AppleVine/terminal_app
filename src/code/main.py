@@ -2,11 +2,8 @@ from os import system
 from functions import * 
 from classes import *
 
-
-your_character = Full_Caster("Wizard", 0)
-
 try:
-    load_character()
+    your_character = load_character()
 except:
     pass
-main_menu()
+main_menu(your_character)
