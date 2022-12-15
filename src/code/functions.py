@@ -61,13 +61,13 @@ def get_spells(your_character):
         print("You have " + str(your_character.level_7_remaining) + " level 7 spellslots available.")
         print("You have " + str(your_character.level_8_remaining) + " level 8 spellslots available.")
         print("You have " + str(your_character.level_9_remaining) + " level 9 spellslots available.")
-        input("\nPress enter to return to the main menu.\n\n-------- \n\n")
+        input("\nPress enter to return to the main menu.\n\n--------\n\n")
     except AttributeError:
         input("You need to create a charcter first.\nPress enter to return to main menu.\n\n-------- \n\n")
 
 
 def use_spell(your_character):
-    spell_selection = input("What level spellslot are you using?\n\n-------- \n\n")
+    spell_selection = input("What level spellslot are you using?\n\n--------\n\n")
     if spell_selection == "1":
         if your_character.level_1_remaining >= 1:
             your_character.level_1_remaining -= 1

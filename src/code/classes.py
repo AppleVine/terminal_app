@@ -60,7 +60,7 @@ def get_wizard_level():
     your_character = None
     while input_level != "quit":
         system('clear')
-        input_level = input("What level is your Wizard? ")
+        input_level = input("What level is your Wizard?\n\n-------- \n\n")
         system('clear')
         if input_level == "quit":
             quit()
@@ -126,7 +126,7 @@ def get_wizard_level():
             return your_character
         else:
             print("That's not a valid option, please try again.")
-            input("Enter to continue.")
+            input("Enter to continue.\n\n-------- \n\n")
 
 
 def get_paladin_level():
@@ -135,15 +135,15 @@ def get_paladin_level():
     while your_character == None:
         try:
             system('clear')
-            input_level = input("What level is your Paladin? Please choose from 1-20.\n")
+            input_level = input("What level is your Paladin? Please choose from 1-20.\n\n-------- \n\n")
             system('clear')
             int_input = int(input_level)
-            if input_level == "quit":
-                quit()
-            elif int_input == 1:
-                return Half_Caster("Paladin", 1)
+            if int_input == 1:
+                your_character = Half_Caster("Paladin", 1)
+                return your_character
             elif int_input == 2:
-                return Half_Caster("Paladin", 2, 0, 2)
+                your_character = Half_Caster("Paladin", 2, 0, 2)
+                return your_character
             elif int_input == 3:
                 your_character = Half_Caster("Paladin", 3, 0, 3)
                 return your_character
@@ -199,13 +199,13 @@ def get_paladin_level():
                 your_character = Half_Caster("Paladin", 20, 0, 4, 3, 3, 3, 2)
                 return your_character
         except ValueError:
-            input("That's not a valid response, please only enter a number from 1-20.\nPress Enter to continue.")
+            input("That's not a valid response, please only enter a number from 1-20.\nPress Enter to continue.\n\n-------- \n\n")
 
 class_selection = None
 
 def class_input():
     print("Please enter in the class from the following choices: ")
-    class_selection = input("Paladin \nWizard\n \n-------- \n \n")
+    class_selection = input("Paladin \nWizard\n\n-------- \n\n")
     system('clear')
     return class_selection
 
@@ -215,11 +215,11 @@ def class_selector(class_selection):
         quit()
     elif class_selection == "Paladin":
         your_character = get_paladin_level()
-        input("Character successfully created. Please press enter to return to main menu. \n \n-------- \n \n")
+        input("You successfully created a level " + str(your_character.level) + " " + your_character.dndclass + ".\nPlease press enter to return to main menu.\n\n-------- \n\n")
         return your_character
     elif class_selection == "Wizard":
         your_character = get_wizard_level()
-        input("Character successfully created. Please press enter to return to main menu.\n \n-------- \n \n")
+        input("You successfully created a level " + str(your_character.level) + " " + your_character.dndclass + ".\nPlease press enter to return to main menu.\n\n-------- \n\n")
         return your_character
 
 
