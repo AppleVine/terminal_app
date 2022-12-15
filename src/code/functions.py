@@ -262,4 +262,3 @@ def view_spell_database():
         print(spell_database)
     except NameError:
         input("Spell database has not been created yet.")
-    

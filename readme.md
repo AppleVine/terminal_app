@@ -4,6 +4,8 @@
 
 # Error Handling
 
+This supports the addition of a later variable spell_database which I will hopefully be able to create in a future update. If it was available and this error occurs, then view_spell_database does not have access to the variable (which could be just passing spell_database if it were created).
+
 ```python
 def view_spell_database():
     try:
@@ -12,6 +14,7 @@ def view_spell_database():
         input("Spell database has not been created yet.")
 ```
 
+If the file were moved, deleted or corrupted then the user would recieve a FileNotFoundError when trying to load the character. Saving a new character should resolve this issue so allowing them to continue makes sense.
 
 ```python
 try:
@@ -21,6 +24,7 @@ except FileNotFoundError:
 main_menu(your_character)
 ```
 
+This will occur if get_spells cannot access your_character. The returning of your_character is tricky between functions, so any messing around with the code could make an issue with this variable where it cannot access the information and return this error message, however it could also be a loading error if that was changed and by making a character in menu this would still continue to function. 
 
 ```python
 def get_spells(your_character):
@@ -38,6 +42,7 @@ def get_spells(your_character):
     except AttributeError:
         input("You need to create a charcter first.\nPress enter to return to main menu.\n\n-------- \n\n")
 ```
+This was made differently to get_wizard_level in order to show a ValueError by requiring integer of user input instead of a string. If the user tries to input a non-integer it'll create a ValueError, which can be resolved by the user inputting the correct value, hence looping them back in. 
 
 ```python
 def get_paladin_level():
