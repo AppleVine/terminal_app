@@ -1,7 +1,9 @@
 from os import system
 from classes import *
 import csv
+from prettytable import PrettyTable
 
+x = PrettyTable()
 
 def main_menu_options():
     print("Type quit to close the program.")
@@ -34,17 +36,13 @@ def main_menu(your_character):
         elif main_menu_selection == "5":
             view_spell_database()
         elif main_menu_selection == "6":
-            print("This is option 6.")
-            input("Press enter to return to the main menu.")
+            input("This feature has not been built yet. Look forward to it in the coming patches!.\n\n-------- \n\n")
         elif main_menu_selection == "7":
-            print("This is option 7.")
-            input("Press enter to return to the main menu.")
+            input("This feature has not been built yet. Look forward to it in the coming patches!.\n\n-------- \n\n")
         elif main_menu_selection == "8":
             save_character(your_character)
-            input("Your character has saved successfully.\nPress Enter to return to the main menu.\n\n-------- \n\n")
         elif main_menu_selection == "9":
-            print("This is option 9.")
-            input("Press enter to return to the main menu.")
+            input("This feature has not been built yet. Look forward to it in the coming patches!.\n\n-------- \n\n")
         elif main_menu_selection == "quit":
             quit()
         else:
@@ -52,115 +50,124 @@ def main_menu(your_character):
 
 def get_spells(your_character):
     try:
-        print("You have " + str(your_character.level_1_remaining) + " level 1 spellslots available.")
-        print("You have " + str(your_character.level_2_remaining) + " level 2 spellslots available.")
-        print("You have " + str(your_character.level_3_remaining) + " level 3 spellslots available.")
-        print("You have " + str(your_character.level_4_remaining) + " level 4 spellslots available.")
-        print("You have " + str(your_character.level_5_remaining) + " level 5 spellslots available.")
-        print("You have " + str(your_character.level_6_remaining) + " level 6 spellslots available.")
-        print("You have " + str(your_character.level_7_remaining) + " level 7 spellslots available.")
-        print("You have " + str(your_character.level_8_remaining) + " level 8 spellslots available.")
-        print("You have " + str(your_character.level_9_remaining) + " level 9 spellslots available.")
+        x.field_names = ["Spellslot level", "remaining", "maximum"]
+        x.add_row(["1", your_character.level_1_remaining, your_character.level_1_spellslots])
+        x.add_row(["2", your_character.level_2_remaining, your_character.level_2_spellslots])
+        x.add_row(["3", your_character.level_3_remaining, your_character.level_3_spellslots])
+        x.add_row(["4", your_character.level_4_remaining, your_character.level_4_spellslots])
+        x.add_row(["5", your_character.level_5_remaining, your_character.level_5_spellslots])
+        x.add_row(["6", your_character.level_6_remaining, your_character.level_6_spellslots])
+        x.add_row(["7", your_character.level_7_remaining, your_character.level_7_spellslots])
+        x.add_row(["8", your_character.level_8_remaining, your_character.level_8_spellslots])
+        x.add_row(["9", your_character.level_9_remaining, your_character.level_9_spellslots])
+        print(x)
         input("\nPress enter to return to the main menu.\n\n--------\n\n")
     except AttributeError:
         input("You need to create a charcter first.\nPress enter to return to main menu.\n\n-------- \n\n")
 
 
 def use_spell(your_character):
-    spell_selection = input("What level spellslot are you using?\n\n--------\n\n")
-    if spell_selection == "1":
-        if your_character.level_1_remaining >= 1:
-            your_character.level_1_remaining -= 1
-            system('clear')
-            input("You have " + str(your_character.level_1_remaining) + " level 1 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
-            return your_character
-        else:
-            input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
-    elif spell_selection == "2":
-        if your_character.level_2_remaining >= 1:
-            your_character.level_2_remaining -= 1
-            system('clear')
-            input("You have " + str(your_character.level_2_remaining) + " level 2 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
-            return your_character
-        else:
-            system('clear')
-            input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
-    elif spell_selection == "3":
-        if your_character.level_3_remaining >= 1:
-            your_character.level_3_remaining -= 1
-            system('clear')
-            input("You have " + str(your_character.level_3_remaining) + " level 3 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
-            return your_character
-        else:
-            system('clear')
-            input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
-    elif spell_selection == "4":
-        if your_character.level_4_remaining >= 1:
-            your_character.level_4_remaining -= 1
-            system('clear')
-            input("You have " + str(your_character.level_4_remaining) + " level 4 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
-            return your_character
-        else:
-            system('clear')
-            input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
-    elif spell_selection == "5":
-        if your_character.level_5_remaining >= 1:
-            your_character.level_5_remaining -= 1
-            system('clear')
-            input("You have " + str(your_character.level_5_remaining) + " level 5 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
-            return your_character
-        else:
-            system('clear')
-            input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
-    elif spell_selection == "6":
-        if your_character.level_6_remaining >= 1:
-            your_character.level_6_remaining -= 1
-            system('clear')
-            input("You have " + str(your_character.level_6_remaining) + " level 6 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
-            return your_character
-        else:
-            system('clear')
-            input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
-    elif spell_selection == "7":
-        if your_character.level_7_remaining >= 1:
-            your_character.level_7_remaining -= 1
-            system('clear')
-            input("You have " + str(your_character.level_7_remaining) + " level 7 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
-            return your_character
-        else:
-            system('clear')
-            input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
-    elif spell_selection == "8":
-        if your_character.level_8_remaining >= 1:
-            your_character.level_8_remaining -= 1
-            system('clear')
-            input("You have " + str(your_character.level_8_remaining) + " level 8 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
-            return your_character
-        else:
-            system('clear')
-            input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
-    elif spell_selection == "9":
-        if your_character.level_9_remaining >= 1:
-            your_character.level_9_remaining -= 1
-            system('clear')
-            input("You have " + str(your_character.level_9_remaining) + " level 9 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
-            return your_character
-        else:
-            system('clear')
-            input("You do not have enough spell slots remaining. You need to rest first!\nPress enter to continue.\n\n-------- \n\n")
+    try:
+        spell_selection = input("What level spellslot are you using?\n\n--------\n\n")
+        if spell_selection == "1":
+            if your_character.level_1_remaining >= 1:
+                your_character.level_1_remaining -= 1
+                system('clear')
+                input("You have " + str(your_character.level_1_remaining) + " level 1 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
+                return your_character
+            else:
+                input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
+        elif spell_selection == "2":
+            if your_character.level_2_remaining >= 1:
+                your_character.level_2_remaining -= 1
+                system('clear')
+                input("You have " + str(your_character.level_2_remaining) + " level 2 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
+                return your_character
+            else:
+                system('clear')
+                input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
+        elif spell_selection == "3":
+            if your_character.level_3_remaining >= 1:
+                your_character.level_3_remaining -= 1
+                system('clear')
+                input("You have " + str(your_character.level_3_remaining) + " level 3 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
+                return your_character
+            else:
+                system('clear')
+                input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
+        elif spell_selection == "4":
+            if your_character.level_4_remaining >= 1:
+                your_character.level_4_remaining -= 1
+                system('clear')
+                input("You have " + str(your_character.level_4_remaining) + " level 4 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
+                return your_character
+            else:
+                system('clear')
+                input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
+        elif spell_selection == "5":
+            if your_character.level_5_remaining >= 1:
+                your_character.level_5_remaining -= 1
+                system('clear')
+                input("You have " + str(your_character.level_5_remaining) + " level 5 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
+                return your_character
+            else:
+                system('clear')
+                input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
+        elif spell_selection == "6":
+            if your_character.level_6_remaining >= 1:
+                your_character.level_6_remaining -= 1
+                system('clear')
+                input("You have " + str(your_character.level_6_remaining) + " level 6 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
+                return your_character
+            else:
+                system('clear')
+                input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
+        elif spell_selection == "7":
+            if your_character.level_7_remaining >= 1:
+                your_character.level_7_remaining -= 1
+                system('clear')
+                input("You have " + str(your_character.level_7_remaining) + " level 7 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
+                return your_character
+            else:
+                system('clear')
+                input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
+        elif spell_selection == "8":
+            if your_character.level_8_remaining >= 1:
+                your_character.level_8_remaining -= 1
+                system('clear')
+                input("You have " + str(your_character.level_8_remaining) + " level 8 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
+                return your_character
+            else:
+                system('clear')
+                input("You do not have enough spell slots remaining. You need to rest first!\n Press enter to continue.\n\n-------- \n\n")
+        elif spell_selection == "9":
+            if your_character.level_9_remaining >= 1:
+                your_character.level_9_remaining -= 1
+                system('clear')
+                input("You have " + str(your_character.level_9_remaining) + " level 9 spellslots remaining.\nPress Enter to return to the Main Menu.\n\n-------- \n\n")
+                return your_character
+            else:
+                system('clear')
+                input("You do not have enough spell slots remaining. You need to rest first!\nPress enter to continue.\n\n-------- \n\n")
+    except AttributeError:
+        system('clear')
+        input("It looks like your character creation was interupted. Please continue with character creation. \nPress enter to return to the main menu.\n\n-------- \n\n")
 
 def rest(your_character):
-    your_character.level_1_remaining = your_character.level_1_spellslots
-    your_character.level_2_remaining = your_character.level_2_spellslots
-    your_character.level_3_remaining = your_character.level_3_spellslots
-    your_character.level_4_remaining = your_character.level_4_spellslots
-    your_character.level_5_remaining = your_character.level_5_spellslots
-    your_character.level_6_remaining = your_character.level_6_spellslots
-    your_character.level_7_remaining = your_character.level_7_spellslots
-    your_character.level_8_remaining = your_character.level_8_spellslots
-    your_character.level_9_remaining = your_character.level_9_spellslots
-    input("You are all rested, and spellslots have been restored.\nPress enter to continue.\n\n-------- \n\n")
-    return your_character
+    try:
+        your_character.level_1_remaining = your_character.level_1_spellslots
+        your_character.level_2_remaining = your_character.level_2_spellslots
+        your_character.level_3_remaining = your_character.level_3_spellslots
+        your_character.level_4_remaining = your_character.level_4_spellslots
+        your_character.level_5_remaining = your_character.level_5_spellslots
+        your_character.level_6_remaining = your_character.level_6_spellslots
+        your_character.level_7_remaining = your_character.level_7_spellslots
+        your_character.level_8_remaining = your_character.level_8_spellslots
+        your_character.level_9_remaining = your_character.level_9_spellslots
+        input("You are all rested, and spellslots have been restored.\nPress enter to continue.\n\n-------- \n\n")
+        return your_character
+    except AttributeError:
+        input("It looks like your character creation was interupted. Please continue with character creation. \nPress enter to return to the main menu.\n\n-------- \n\n")
 
 
 def get_data(your_character):
@@ -194,11 +201,15 @@ loaded_data = []
 your_character = Full_Caster("Nothing1", 0)
 
 def save_character(your_character):
-    data = get_data(your_character)
-    with open("your_character_file.csv", 'w') as your_character_file:
-        writer = csv.DictWriter(your_character_file, fieldnames=data.keys())
-        writer.writeheader()
-        writer.writerow(data)
+    try:
+        data = get_data(your_character)
+        with open("your_character_file.csv", 'w') as your_character_file:
+            writer = csv.DictWriter(your_character_file, fieldnames=data.keys())
+            writer.writeheader()
+            writer.writerow(data)
+        input("Your character has saved successfully.\nPress Enter to return to the main menu.\n\n-------- \n\n")
+    except AttributeError:
+        input("It looks like your character creation was interupted. Please continue with character creation. \nPress enter to return to the main menu.\n\n-------- \n\n")
 
 def load_character():
     with open ('your_character_file.csv', 'r') as your_character_file:
@@ -253,10 +264,6 @@ def load_character():
         your_character.level_9_remaining = int(loaded_data[20])
         return your_character
         
-
-
-
-
 def view_spell_database():
     try:
         print(spell_database)
