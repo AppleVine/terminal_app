@@ -4,7 +4,7 @@ import csv
 
 
 def main_menu_options():
-    print("To quit at any time, please type: quit")
+    print("Type quit to close the program.")
     print("1: Input class selection, and class level.")
     print("2: Check available spellslots")
     print("3: Use a spell")
@@ -32,8 +32,7 @@ def main_menu(your_character):
         elif main_menu_selection == "4":
             rest(your_character)
         elif main_menu_selection == "5":
-            print("This is option 5.")
-            input("Press enter to return to the main menu.")
+            view_spell_database()
         elif main_menu_selection == "6":
             print("This is option 6.")
             input("Press enter to return to the main menu.")
@@ -63,7 +62,7 @@ def get_spells(your_character):
         print("You have " + str(your_character.level_8_remaining) + " level 8 spellslots available.")
         print("You have " + str(your_character.level_9_remaining) + " level 9 spellslots available.")
         input("\nPress enter to return to the main menu.\n\n-------- \n\n")
-    except:
+    except AttributeError:
         input("You need to create a charcter first.\nPress enter to return to main menu.\n\n-------- \n\n")
 
 
@@ -253,5 +252,14 @@ def load_character():
         your_character.level_9_spellslots = int(loaded_data[19])
         your_character.level_9_remaining = int(loaded_data[20])
         return your_character
-    else:
-        "You have an error."
+        
+
+
+
+
+def view_spell_database():
+    try:
+        print(spell_database)
+    except NameError:
+        input("Spell database has not been created yet.")
+    

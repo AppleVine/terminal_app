@@ -1,2 +1,2 @@
 dndclass,level,cantrips_known,level_1_spellslots,level_1_remaining,level_2_spellslots,level_2_remaining,level_3_spellslots,level_3_remaining,level_4_spellslots,level_4_remaining,level_5_spellslots,level_5_remaining,level_6_spellslots,level_6_remaining,level_7_spellslots,level_7_remaining,level_8_spellslots,level_8_remaining,level_9_spellslots,level_9_remaining
-Paladin,2,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Wizard,10,5,4,4,3,3,3,3,3,3,2,2,0,0,0,0,0,0,0,0
