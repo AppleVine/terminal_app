@@ -229,10 +229,6 @@ def load_character():
         your_character.level_8_remaining = int(loaded_data[18])
         your_character.level_9_spellslots = int(loaded_data[19])
         your_character.level_9_remaining = int(loaded_data[20])
-        print(your_character.level)
-        print(your_character.dndclass)
-        print(loaded_data[0])
-        print(your_character.level_1_remaining)
         return your_character
     elif loaded_data[0] == "Paladin":
         your_character = Half_Caster("Paladin", 0)
@@ -256,10 +252,6 @@ def load_character():
         your_character.level_8_remaining = int(loaded_data[18])
         your_character.level_9_spellslots = int(loaded_data[19])
         your_character.level_9_remaining = int(loaded_data[20])
-        print(your_character.level)
-        print(your_character.dndclass)
-        print(your_character.level_1_remaining)
-        input("Enter to continue")
         return your_character
     else:
         "You have an error."
