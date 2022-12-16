@@ -3,7 +3,7 @@ from classes import *
 import csv
 from prettytable import PrettyTable
 
-x = PrettyTable()
+
 
 def main_menu_options():
     print("Type quit to close the program.")
@@ -50,6 +50,7 @@ def main_menu(your_character):
 
 def get_spells(your_character):
     try:
+        x = PrettyTable()
         x.field_names = ["Spellslot level", "remaining", "maximum"]
         x.add_row(["1", your_character.level_1_remaining, your_character.level_1_spellslots])
         x.add_row(["2", your_character.level_2_remaining, your_character.level_2_spellslots])

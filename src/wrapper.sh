@@ -1,10 +1,23 @@
 #!/bin/bash
-python3 main.py
 
-if ! [[ -x "$(command -v python)" ]]
-then
-  echo 'Error: 
-    This program runs on Python, but it looks like Python is not installed.
-    To install Python, check out https://installpython3.com/' >&2
-  exit 1
+if ! command -v python3 &> /dev/null || ! command -v python &> /dev/null
+  then 
+    echo "You don't have python installed. Please check out https://installpython3.com/'"
+    exit
 fi
+
+if command -v python3 &> /dev/null
+  then
+    python3 -m venv app-venv
+    source app-venv/bin/activate
+    pip install -r requirements.txt
+fi
+
+if command -v python &> /dev/null
+  then
+    python -m venv app-venv
+    source app-venv/bin/activate
+    pip install -r requirements.txt
+fi
+
+python3 main.py
