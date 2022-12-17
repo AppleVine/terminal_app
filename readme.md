@@ -9,6 +9,10 @@ Installation guide:
 5.2) This will install all other prerequisites and run the program for you. If you do not have python installed, again, it'll tell you to install python with a link. 
 
 
+# Video link
+
+https://vimeo.com/782028492/5e6882d34a
+
 # Project management
 
 https://trello.com/invite/b/rdstGF0P/ATTI232b1437e307958311951e670b0816ba1A6EFCFA/terminal-app-project
