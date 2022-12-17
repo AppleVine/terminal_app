@@ -13,6 +13,10 @@ Installation guide:
 
 https://vimeo.com/782028492/5e6882d34a
 
+# GitHub Link
+
+https://github.com/AppleVine/terminal_app
+
 # Project management
 
 https://trello.com/invite/b/rdstGF0P/ATTI232b1437e307958311951e670b0816ba1A6EFCFA/terminal-app-project
