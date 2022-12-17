@@ -70,6 +70,7 @@ def get_spells(your_character):
 def use_spell(your_character):
     try:
         spell_selection = input("What level spellslot are you using?\n\n--------\n\n")
+        system('clear')
         if spell_selection == "1":
             if your_character.level_1_remaining >= 1:
                 your_character.level_1_remaining -= 1

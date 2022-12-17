@@ -1,3 +1,19 @@
+Installation guide:
+
+1) If you don't have python or python3 installed, you need to install python3 before using this progam (or it'll tell you to install python.)
+2) Open your terminal of choice.
+3) Change directories into the src directory. e.g. cd where/you/saved/JakebCockburn_T1A3/src
+4) copy, paste and enter: sudo chmod +x wrapper.sh
+4.2) This will give permission to the wrapper to execute.
+5) copy, paste and enter: ./wrapper.sh
+5.2) This will install all other prerequisites and run the program for you. If you do not have python installed, again, it'll tell you to install python with a link. 
+
+
+
+
+# Project management
+
+https://trello.com/invite/b/rdstGF0P/ATTI232b1437e307958311951e670b0816ba1A6EFCFA/terminal-app-project
 
 
 
