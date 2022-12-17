@@ -9,8 +9,6 @@ Installation guide:
 5.2) This will install all other prerequisites and run the program for you. If you do not have python installed, again, it'll tell you to install python with a link. 
 
 
-
-
 # Project management
 
 https://trello.com/invite/b/rdstGF0P/ATTI232b1437e307958311951e670b0816ba1A6EFCFA/terminal-app-project
@@ -23,6 +21,24 @@ https://trello.com/invite/b/rdstGF0P/ATTI232b1437e307958311951e670b0816ba1A6EFCF
 https://docs.google.com/spreadsheets/d/1GNs_gPxMxnVC6SYm-1gjLvLIXTqMV4tJJm-SI07-lq4/edit?usp=sharing
 
 ![Image](./docs/testing.png)
+
+
+# Validation of class data:
+
+Wizard table:
+http://pm1.narvii.com/6956/1ace3f873a9152e9ff03048a45b95e25f142cc82r1-775-499v2_uhq.jpg
+![Wizard-Table](./docs/Wizard-table.jpg)
+
+Paladin Table:
+https://mykindofmeeple.com/wp-content/uploads/2022/01/Paladin-spell-slots-table-5e-dnd.jpg.webp
+![Paladin-Table](./docs/paladin-table.jpg)
+
+
+
+
+
+
+
 
 
 # Error Handling

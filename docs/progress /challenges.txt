@@ -1,9 +1,0 @@
-My main menu is a very similar concept to the cafe menu that Jairo did as an example. Worried about clash with that.
-
-Making the individual class variable able to be changed globally did not work as expected. Even with return it wasn't updating the global variable.
-It took nearly a day going through so many similar solutions online just to get this to update the user variable (decided by input) to the correct class instance.
-
-Massive difficulty when trying to return variables, had to learn better ways to do it across functions. 
-
-Trying to get the remaining spell slots to be functional without repeating too much code felt very hard. Tried classes in classes, independent variables and finally extra variables in the class. 
-
